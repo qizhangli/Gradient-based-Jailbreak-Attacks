@@ -81,11 +81,6 @@ if __name__ == "__main__":
         args.method = "autoprompt_combine"
     elif "autoprompt" in args.method:
         args.method = "autoprompt"
-    
-    result_name="individual_{}_{}_topk{}_bs{}_seed{}".format(
-        args.model_name, args.method,
-        args.topk, args.batch_size, args.seed
-    )
 
     timestamp = time.strftime("%Y%m%d-%H:%M:%S")
     args.log_file = f"{args.savedir}_{timestamp}.json"

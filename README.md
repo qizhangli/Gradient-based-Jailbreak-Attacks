@@ -18,6 +18,14 @@ To evaluate the adversarial suffixes, run:
 logdir=${logdir} bash scripts/eval.sh
 ```
 
+## Citation
+Please cite our work in your publications if it helps your research:
 
-
-
+```
+@article{li2024improved,
+  title={Improved Generation of Adversarial Examples Against Safety-aligned LLMs},
+  author={Li, Qizhang and Guo, Yiwen and Zuo, Wangmeng and Chen, Hao},
+  journal={arXiv preprint arXiv:2405.20778},
+  year={2024}
+}
+```

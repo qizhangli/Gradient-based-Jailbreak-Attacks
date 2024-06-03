@@ -1,4 +1,4 @@
-This repository contains a PyTorch implementation for our paper ***Improved Generation of Adversarial Examples Against Safety-aligned LLMs***. 
+This repository contains a PyTorch implementation for our paper [***Improved Generation of Adversarial Examples Against Safety-aligned LLMs***](https://arxiv.org/abs/2405.20778). 
 
 ## Environments
 * Python 3.8.8

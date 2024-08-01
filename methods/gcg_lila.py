@@ -52,7 +52,7 @@ def gcg_lila(args, model, tokenizer, pair):
 
         if i > 0:
             model.model.layers[args.lila_layer].register_full_backward_hook(get_change_grad_hook((act_init["act"] - act_curr["act"]), 
-                                                                            tok=slice(target_slice.start, target_slice.start+1)))
+                                                                            tok=slice(target_slice.start-1, target_slice.start)))
         grad = token_gradients(model, curr_ids[0].to(model.device), control_slice, target_slice)
         remove_backward_hooks(model)
         c_cands_sample = 0

@@ -55,7 +55,7 @@ def autoprompt_combine(args, model, tokenizer, pair):
 
         if i > 0:
             model.model.layers[args.lila_layer].register_full_backward_hook(get_change_grad_hook((act_init["act"] - act_curr["act"]), 
-                                                                        tok = slice(target_slice.start, target_slice.start+1)))
+                                                                        tok = slice(target_slice.start-1, target_slice.start)))
         for name, module in model.named_modules():
             if "post_attention_layernorm" in name or "input_layernorm" in name:
                 module.register_full_backward_hook(get_lsgm_hook(args.gamma))

@@ -26,7 +26,7 @@ def get_prompt(goal, control, target, tokenizer, model_path, sep=None):
         prompt += f"{seperator}{control}"
         toks = tokenizer(prompt).input_ids
         _control_slice = slice(_goal_slice.stop, len(toks))
-        prompt += " [/INST]"
+        prompt += " [/INST] "
         toks = tokenizer(prompt).input_ids
         _assistant_role_slice = slice(_control_slice.stop, len(toks))
         if sep == None:

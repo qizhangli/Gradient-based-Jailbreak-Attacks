@@ -9,9 +9,7 @@ def get_hook(act):
 
 def get_change_grad_hook(diff, tok):
     def change_grad_hook(m, i, o):
-        i[0].data[:, tok, :] = diff[:, tok, :].data
-        i[0].data[:, :tok.start, :] = 0*i[0].data[:, :tok.start, :]
-        i[0].data[:, tok.stop:, :] = 0*i[0].data[:, tok.stop:, :]
+        i[0].data[:, tok, :] = (i[0].data[:, tok, :].norm(p=2, dim=(1,2), keepdim=True) * F.normalize(diff[:, tok, :].float(), dim=(1,2), p=2)).half()
     return change_grad_hook
 
 def gcg_lila(args, model, tokenizer, pair):

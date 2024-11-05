@@ -11,7 +11,7 @@ To generate adversarial suffixes, run:
 ```
 method=${method} model=${model} seed=${seed} bash scripts/exp.sh
 ```
-where ```method=gcg / gcg_lsgm_0.5 (gamma=0.5) / gcg_lila_16 (lila_layer=16) / gcg_combine_0.5_16_10 (gamma=0.5, lila_layer=16, num_train_queries=10) / gcgens (universal suffix) / ...``` and ```model=llama2 / llama2-13b / mistral```.
+where ```method=gcg / gcg_lsgm_0.5 (gamma=0.5) / gcg_lila_16 (lila_layer=16) / gcg_combine_0.5_16_10 (gamma=0.5, lila_layer=16, num_train_queries=10) / gcgens (universal suffix) / gcgens_combine_0.5_16_10``` and ```model=llama2 / llama2-13b / mistral```.
 
 To evaluate the adversarial suffixes, run:
 ```

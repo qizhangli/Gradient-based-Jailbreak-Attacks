@@ -1,4 +1,4 @@
-This repository contains a PyTorch implementation for our paper [***Improved Generation of Adversarial Examples Against Safety-aligned LLMs***](https://arxiv.org/abs/2405.20778). 
+This repository contains a PyTorch implementation for our NeurIPS 2024 paper [***Improved Generation of Adversarial Examples Against Safety-aligned LLMs***](https://arxiv.org/abs/2405.20778). 
 
 ## Environments
 * Python 3.8.8
@@ -25,7 +25,7 @@ Please cite our work in your publications if it helps your research:
 @article{li2024improved,
   title={Improved Generation of Adversarial Examples Against Safety-aligned LLMs},
   author={Li, Qizhang and Guo, Yiwen and Zuo, Wangmeng and Chen, Hao},
-  journal={arXiv preprint arXiv:2405.20778},
+  journal={Advances in Neural Information Processing Systems},
   year={2024}
 }
 ```
